@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Logo from '../src/components/assets/theNoogles2.png'
 import Link from 'next/link';
 import { FaCaretDown } from 'react-icons/fa';
+import SideBar from '../src/components/sideBar';
 
 
 export default function Home() {
@@ -14,13 +15,13 @@ export default function Home() {
   const isDesktop = useBreakpointValue({ base: false, md: false, lg: true })
 
   return (
-    <Box className=''>
+    <Box>
       <PageLayout title='Home' description='' footer={true} navbar={true} >
-        <ContainLayout>
-          <Stack direction={['column', 'row']} spacing={['1rem', '10rem']} p={['1rem', '3rem']} align='center' justify='space-between'>
-            
-          </Stack>
-        </ContainLayout>
+        <Box h='max-content' w='full' position='relative'>
+          <ContainLayout>
+            <SideBar />
+          </ContainLayout>
+        </Box>
       </PageLayout>
     </Box>
 
