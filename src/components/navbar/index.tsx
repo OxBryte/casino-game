@@ -73,7 +73,7 @@ const Navbar = () => {
             <Box as="nav" px={{ base: '4', md: '8', lg: '12' }} py='10px' bg='brand.200'>
               <Flex justify='space-between' align='center'>
                 <Link href="/">
-                  <Image src={Logo} alt="" width={70} />
+                      <Text>Logo</Text>
                 </Link>
                 {ToggleNav ? (
                   <IconButton
