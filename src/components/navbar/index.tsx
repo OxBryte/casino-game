@@ -43,10 +43,10 @@ const Navbar = () => {
       ) : (
         <Box>
           {ToggleNav ? (
-            <Flex flexDir='column' gap='50px' w='100%' py='10px' pb='20px' px={4} color='white' bg='#000' h='100vh'>
+            <Flex flexDir='column' gap='50px' w='100%' py='10px' pb='20px' px={4} color='white' bg='brand.200' h='100vh'>
               <Flex align='center' justify='space-between'>
                 <Link href="/">
-                  <Image src={Logo} alt="" width={70} />
+                    <Text>Logo</Text>
                 </Link>
                 {ToggleNav ? (
                   <IconButton
@@ -70,7 +70,7 @@ const Navbar = () => {
               </Flex>
             </Flex>
           ) : (
-            <Box as="nav" px={{ base: '4', md: '8', lg: '12' }} py='10px' bg='blackAlpha.800'>
+            <Box as="nav" px={{ base: '4', md: '8', lg: '12' }} py='10px' bg='brand.200'>
               <Flex justify='space-between' align='center'>
                 <Link href="/">
                   <Image src={Logo} alt="" width={70} />
