@@ -1,9 +1,9 @@
 import { Box, Image, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
-export default function CardComp() {
+export default function Card() {
     return (
-        <Box>
+        <Box _hover={{borderWidth: '3px', rounded: '16px', borderColor:'whiteAlpha.400', boxShadow: 'lg'}}>
             <VStack rounded='16px' minW='240px' overflow='hidden' bg='brand.200'>
                 <Image src='/assets/game.png' alt='' />
                 <VStack p='16px'>
