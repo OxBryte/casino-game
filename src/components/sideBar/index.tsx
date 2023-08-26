@@ -34,7 +34,7 @@ export default function SideBar() {
                 </Flex>
                 <Flex justify='space-between' align='center' color='brand.300' rounded='8px' p='12px' w='full' _hover={{ bg: 'brand.200', color: 'white' }} cursor='pointer'>
                     <Text>Logout</Text>
-                </Flex>
+                </Flex> 
             </VStack>
         </Box>
     )
