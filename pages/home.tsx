@@ -8,6 +8,7 @@ import Logo from '../src/components/assets/theNoogles2.png'
 import Link from 'next/link';
 import { FaCaretDown } from 'react-icons/fa';
 import SideBar from '../src/components/sideBar';
+import MainLayout from '../src/components/main';
 
 
 export default function Home() {
@@ -17,11 +18,14 @@ export default function Home() {
   return (
     <Box>
       <PageLayout title='Home' description='' footer={true} navbar={true} >
-        <Box h='max-content' w='full' position='relative'>
-          <ContainLayout>
+        <ContainLayout>
+          <HStack w='full' align='top' gap='0' position='relative'>
             <SideBar />
-          </ContainLayout>
-        </Box>
+            <Box py='20px' px='40px' w='full'>
+              <MainLayout />
+            </Box>
+          </HStack>
+        </ContainLayout>
       </PageLayout>
     </Box>
 
