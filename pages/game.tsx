@@ -127,7 +127,7 @@ export default function Game() {
             <Box w="260px" mx="auto" mt={10} gridGap={4} display="grid" gridTemplateColumns="repeat(4, 60px)" justifyContent="center" alignItems="center">
                 {board.flatMap((row, rowIndex) => (
                     row.map((tile, colIndex) => (
-                        <Box key={`${rowIndex}-${colIndex}`} w="60px" h="60px" bg="whiteAlpha.200" display="flex" justifyContent="center" alignItems="center">
+                        <Box key={`${rowIndex}-${colIndex}`} w="60px" h="60px" bg={tile === 4 ? 'red.800' : tile === 2 ? "purple.800" : tile === 8 ? 'orange.600' : tile === 16 ? 'green.800' : tile === 32 ? 'blue.800' : tile === 64 ? 'pink.800' : tile === 128 ? 'orange.800' : "whiteAlpha.200"} display="flex" justifyContent="center" alignItems="center">
                             {tile !== 0 && tile}
                         </Box>
                     ))
@@ -138,7 +138,7 @@ export default function Game() {
             </Box>
             {/* <Box w="260px" mx="auto" mt={5}>
                 <h3>History</h3>
-                <ul>
+                <ul> 
                     {history.map((entry, index) => (
                         <li key={index}>
                             Move {index + 1}: {entry.score}
