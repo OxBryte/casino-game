@@ -17,10 +17,10 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
   const [ToggleNav, setToggleNav] = React.useState(false)
   return (
-    <Fade top>
+    <>
       {isDesktop ? (
         <>
-        <Center w='full' py='12px' bg='brand.100'>Lorem ipsum dolor sit amet consectetur adipisicing </Center>
+        <Center w='full' py='12px' bg='brand.100' fontSize={10}>Lorem ipsum dolor sit amet consectetur adipisicing </Center>
           <Box as="nav" py='22px' backdropBlur='blur(20px)' bg='brand.200'>
             <ContainLayout>
               <Flex justify="space-between" align="center">
@@ -96,7 +96,7 @@ const Navbar = () => {
         </Box>
       )}
 
-    </Fade>
+    </>
   );
 }
 

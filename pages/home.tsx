@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <Box>
-      <PageLayout title='Home' description='' footer={true} navbar={true} >
+      <PageLayout title='Home' description='' footer={false} navbar={true} >
         <ContainLayout>
           <HStack w='full' align='top' gap='0' position='relative'>
             <SideBar />

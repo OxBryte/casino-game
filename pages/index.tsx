@@ -21,7 +21,7 @@ export default function Index() {
     // <PageLayout title='Home' description='My Boilerplate' footer={false} navbar={false} >
     // <ContainLayout>
     <Box>
-      {/* {loading ? (
+      {loading ? (
         <Flex
           direction="column"
           alignItems="center"
@@ -30,15 +30,14 @@ export default function Index() {
           gap={3}
           className='loader-container'
         >
-          <Image src={logo} alt="" width={150} />
           <ClipLoader color="#fff" loading={loading} size="20" />
         </Flex>
       ) : (
         <Box>
           <Home />
         </Box>
-      )} */}
-      <Home />
+      )}
+      {/* <Home /> */}
     </Box>
     // </ContainLayout>
     // </PageLayout>
