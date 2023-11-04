@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, HStack, VStack } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 
 export default function Game() {
@@ -123,7 +123,7 @@ export default function Game() {
 
 
     return (
-        <>
+        <VStack w='full' gap='30px'>
             <Box w="260px" mx="auto" mt={10} gridGap={4} display="grid" gridTemplateColumns="repeat(4, 60px)" justifyContent="center" alignItems="center">
                 {board.flatMap((row, rowIndex) => (
                     row.map((tile, colIndex) => (
@@ -133,10 +133,15 @@ export default function Game() {
                     ))
                 ))}
             </Box>
-            <Box w="260px" mx="auto" mt={5}>
-                <p>Score: {score}</p>
-            </Box>
-            {/* <Box w="260px" mx="auto" mt={5}>
+            <HStack mt={10} gap='20px' align='center' justify='space-around'>
+                <Box mx="auto" >
+                    <p>Score: {score}</p>
+                </Box>
+                <Box mx="auto" onClick={() => {setBoard(createBoard()); setScore(0)}}>
+                    <p>Reset</p>
+                </Box>
+            </HStack>
+            {/* <Box w="260px" mx="auto" mt={5} maxH='300px' overflowY='scroll' overflowX='hidden'>
                 <h3>History</h3>
                 <ul> 
                     {history.map((entry, index) => (
@@ -146,6 +151,6 @@ export default function Game() {
                     ))}
                 </ul>
             </Box> */}
-        </>
+        </VStack>
     )
 }
